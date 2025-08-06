@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramenta Interativa de Estudo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .card {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ferramenta Interativa de Estudo</h1>
+
+    <div class="card">
+        <div class="question">1. Qual é a capital do Brasil?</div>
+        <div class="answer">Resposta: Brasília</div>
+        <button onclick="toggleAnswer(this)">Mostrar Resposta</button>
+    </div>
+
+    <div class="card">
+        <div class="question">2. O que é o Portal da Transparência?</div>
+        <div class="answer">Resposta: Uma plataforma que promove a transparência na gestão pública.</div>
+        <button onclick="toggleAnswer(this)">Mostrar Resposta</button>
+    </div>
+
+    <div class="card">
+        <div class="question">3. O que é a LDO?</div>
+        <div class="answer">Resposta: Lei de Diretrizes Orçamentárias, que orienta a elaboração da LOA.</div>
+        <button onclick="toggleAnswer(this)">Mostrar Resposta</button>
+    </div>
+
+    <script>
+        function toggleAnswer(button) {
+            const answer = button.previousElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                button.textContent = "Esconder Resposta";
+            } else {
+                answer.style.display = "none";
+                button.textContent = "Mostrar Resposta";
+            }
+        }
+    </script>
+
+</body>
+</html>
 
